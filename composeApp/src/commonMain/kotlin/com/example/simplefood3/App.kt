@@ -46,6 +46,7 @@ import simplefood3.composeapp.generated.resources.cheese_burger
 import simplefood3.composeapp.generated.resources.chicken_burger
 import simplefood3.composeapp.generated.resources.comment
 import simplefood3.composeapp.generated.resources.filter
+import simplefood3.composeapp.generated.resources.user
 import simplefood3.composeapp.generated.resources.fried_chicken_burger
 import simplefood3.composeapp.generated.resources.heart
 import simplefood3.composeapp.generated.resources.home
@@ -413,18 +414,12 @@ fun BottomNavigation(modifier: Modifier = Modifier) {
             )
             
             // Create a simple user icon since user.xml doesn't exist
-            Box(
-                modifier = Modifier
-                    .size(24.dp)
-                    .background(Color.White, CircleShape),
-                contentAlignment = Alignment.Center
-            ) {
-                Box(
-                    modifier = Modifier
-                        .size(12.dp)
-                        .background(Color(0xFFEF2A39), CircleShape)
-                )
-            }
+            Icon(
+                painter = painterResource(Res.drawable.user),
+                contentDescription = "User",
+                tint = Color.White,
+                modifier = Modifier.size(24.dp)
+            )
             
             // Center space for floating action button
             Spacer(modifier = Modifier.width(72.dp))
